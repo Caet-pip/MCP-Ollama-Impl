@@ -1,6 +1,9 @@
 # MCP-Ollama-Impl
 Very basic and simple implementation of MCP (Model Context Protocol) with Ollama
 
+### Install requirements
+pip install -r requirements.txt
+
 ### Command to run the MCP Server (This contains the tool calling mechanism)
 python server.py
 
