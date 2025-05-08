@@ -69,17 +69,8 @@ class MCPClient:
         for tool in available_tools:
             print(f" - {tool['function']['name']} - {tool['function']['description']}")
 
-        #FULL PAYLOAD SENT TO OLLAMA
-        full_request_payload = {
-            "model": "llama3.2:3b-instruct-q3_K_M",
-            "messages": messages,
-            "tools": available_tools
-        }
-        print("\n[Client] Full Payload Sent to Ollama:")
-        print(full_request_payload)
-
         response = self.client.chat(
-            model="llama3.2:3b-instruct-q3_K_M",
+            model="llama3.2",
             messages=messages,
             tools=available_tools
         )
@@ -114,7 +105,7 @@ class MCPClient:
 
 
                 response = self.client.chat(
-                    model="llama3.2:3b-instruct-q3_K_M",
+                    model="llama3.2",
                     messages=messages,
                 )
 
