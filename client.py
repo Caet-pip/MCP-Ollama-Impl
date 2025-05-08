@@ -101,8 +101,6 @@ class MCPClient:
                     "content": result.content[0].text
                 })
 
-                # print("TOOLS RESPONSE AND REQUEST TO OLLAMA: ", messages)
-
 
                 response = self.client.chat(
                     model="llama3.2",
@@ -113,7 +111,6 @@ class MCPClient:
                     final_text.append(response["message"]["content"])
 
                 #Log the raw response:**
-                print("\n[SECOND Raw LLM Response]:")
                 print(response)
 
         return "\n".join(final_text)
