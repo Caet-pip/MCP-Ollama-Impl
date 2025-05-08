@@ -5,4 +5,4 @@ Implementation of MCP with Ollama
 python server.py
 
 ### Command to run the MCP Client (This communicates with Ollama and MCP Server)
-python client.py ./server.py
+python client.py <path to server.py>
